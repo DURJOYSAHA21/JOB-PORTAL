@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; display: flex; min-height: 100vh; }
+
+.brand-panel { width: 40%; background: linear-gradient(135deg, #1a1f36 0%, #2d3250 100%); color: white; display: flex; align-items: center; justify-content: center; position: fixed; left: 0; top: 0; bottom: 0; }
+.brand-panel-inner { text-align: center; padding: 40px; }
+.brand-logo { margin-bottom: 30px; }
+.brand-logo-icon { font-size: 64px; display: block; margin-bottom: 10px; color: #7c5dfa; }
+.brand-logo-name { font-size: 36px; font-weight: bold; letter-spacing: 2px; }
+.brand-text { margin-top: 20px; }
+.brand-headline { font-size: 24px; margin-bottom: 15px; font-weight: 600; }
+.brand-slogan { font-size: 14px; color: #a0aec0; line-height: 1.6; }
+
+.main-panel { width: 60%; margin-left: 40%; padding: 40px 60px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.main-panel-inner { max-width: 550px; width: 100%; margin: 0 auto; }
+.main-panel-header { margin-bottom: 30px; }
+.main-panel-title { font-size: 28px; color: #1a1f36; margin-bottom: 8px; }
+.main-panel-sub { font-size: 14px; color: #718096; }
+.main-panel-sub a { color: #7c5dfa; text-decoration: none; font-weight: 600; }
+.main-panel-sub a:hover { text-decoration: underline; }
+
+.main-panel-form { max-width: 550px; width: 100%; margin: 0 auto; }
+.main-panel-form h3 { font-size: 18px; color: #1a1f36; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+
+.personal-form { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+.personal-form label { font-weight: 600; color: #4a5568; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; display: block; }
+.personal-form input[type="text"],
+.personal-form input[type="email"],
+.personal-form input[type="tel"],
+.personal-form input[type="password"] { width: 100%; padding: 10px 14px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; font-family: inherit; color: #2d3748; transition: all 0.2s; margin-bottom: 5px; }
+.personal-form input:focus { outline: none; border-color: #7c5dfa; box-shadow: 0 0 0 3px rgba(124,93,250,0.1); }
+.personal-form input::placeholder { color: #a0aec0; }
+
+.password-field { position: relative; }
+.password-warp { position: relative; }
+.password-warp input { padding-right: 45px !important; }
+.eye-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; cursor: pointer; color: #a0aec0; stroke: currentColor; }
+.eye-icon:hover { color: #7c5dfa; }
+
+.error { color: #e53e3e; font-size: 12px; font-weight: 500; display: block; margin-top: 2px; margin-bottom: 10px; }
+.availability-msg { font-size: 12px; font-weight: 500; display: block; margin-top: 2px; margin-bottom: 5px; }
+.availability-msg.available { color: #38a169; }
+.availability-msg.taken { color: #e53e3e; }
+.availability-msg.error { color: #dd6b20; }
+
+.personal-form button[type="submit"] { width: 100%; padding: 12px; background: #7c5dfa; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; margin-top: 15px; }
+.personal-form button[type="submit"]:hover { background: #6b4ce0; }
+
+.btnnext { width: 100%; max-width: 550px; padding: 12px; background: #fff; color: #7c5dfa; border: 2px solid #7c5dfa; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; margin-top: 15px; display: block; }
+.btnnext:hover { background: #f8f7ff; border-color: #6b4ce0; color: #6b4ce0; }
