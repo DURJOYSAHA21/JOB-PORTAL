@@ -1,0 +1,291 @@
+/* Simple Job Portal style - easy to understand and edit */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef3fb;
+    color: #222;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Login and signup pages */
+.auth-page {
+    padding: 35px 15px;
+}
+
+.auth-box {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    overflow: hidden;
+}
+
+.auth-left {
+    width: 40%;
+    background: #dbeafe;
+    padding: 35px;
+    text-align: center;
+}
+
+.auth-left img {
+    width: 220px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.auth-form {
+    width: 60%;
+    padding: 35px;
+}
+
+.auth-form h1 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.note {
+    background: #f3f4f6;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Admin header and menu */
+.header {
+    background: #1e3a8a;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    color: white;
+    margin-left: 15px;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 25px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.nav a {
+    background: #e5e7eb;
+    color: #111827;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav a:hover {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+}
+
+/* Common sections */
+.welcome-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-box img {
+    width: 150px;
+    max-width: 35%;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.card strong {
+    display: block;
+    font-size: 28px;
+    color: #1e3a8a;
+    margin-top: 8px;
+}
+
+.filter {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Forms */
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    padding: 9px;
+    margin: 5px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
+    max-width: 100%;
+}
+
+.form-input {
+    width: 100%;
+}
+
+button, .button-link {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+button:hover, .button-link:hover {
+    background: #1d4ed8;
+    text-decoration: none;
+}
+
+button.danger, .danger {
+    background: #dc2626;
+}
+
+button.danger:hover, .danger:hover {
+    background: #b91c1c;
+}
+
+button.secondary, .secondary {
+    background: #4b5563;
+}
+
+.inline-form {
+    display: inline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #e5e7eb;
+    padding: 9px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+.badge {
+    background: #e0e7ff;
+    color: #1e3a8a;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.message-success {
+    background: #dcfce7;
+    color: #166534;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.message-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.help-text {
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.role-card {
+    max-width: 650px;
+    margin: 50px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+.role-card img {
+    width: 180px;
+    max-width: 100%;
+}
+
+/* Small screen */
+@media (max-width: 750px) {
+    .auth-box, .welcome-box {
+        display: block;
+    }
+
+    .auth-left, .auth-form {
+        width: auto;
+    }
+
+    .welcome-box img {
+        max-width: 100%;
+        margin-top: 15px;
+    }
+
+    .header {
+        display: block;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
