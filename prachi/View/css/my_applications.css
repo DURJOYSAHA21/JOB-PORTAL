@@ -1,0 +1,163 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+.back-link:hover { text-decoration: underline; }
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+}
+
+.error-alert {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.empty-state p {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.application-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.app-header h3 {
+    font-size: 17px;
+}
+.app-header h3 a {
+    color: #333;
+    text-decoration: none;
+}
+.app-header h3 a:hover {
+    color: #667eea;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-submitted { background: #cce5ff; color: #004085; }
+.badge-reviewed { background: #fff3cd; color: #856404; }
+.badge-shortlisted { background: #d4edda; color: #155724; }
+.badge-interview { background: #d1ecf1; color: #0c5460; }
+.badge-rejected { background: #f8d7da; color: #721c24; }
+.badge-withdrawn { background: #e2e3e5; color: #383d41; }
+
+.app-company {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.app-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.app-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.app-date {
+    font-size: 13px;
+    color: #999;
+}
+
+.app-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-sm {
+    padding: 6px 14px;
+    font-size: 13px;
+    background: #667eea;
+    color: white;
+    border-radius: 4px;
+}
+.btn-sm:hover { background: #5a6fd6; }
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+.btn-danger:hover { background: #c82333; }

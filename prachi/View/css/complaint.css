@@ -1,0 +1,120 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+.back-link:hover { text-decoration: underline; }
+
+h1 { font-size: 24px; margin-bottom: 20px; }
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.job-info {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.job-info p { font-size: 14px; margin-bottom: 5px; color: #555; }
+
+.error-alert {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 500; margin-bottom: 6px; color: #444; }
+.form-group label .required { color: #e74c3c; }
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 150px;
+}
+.form-group textarea:focus { outline: none; border-color: #667eea; }
+.input-hint { font-size: 12px; color: #888; margin-top: 4px; display: block; }
+
+.btn-row { display: flex; gap: 10px; justify-content: flex-end; }
+.btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-primary { background: #667eea; color: white; }
+.btn-primary:hover { background: #5a6fd6; }
+.btn-secondary { background: #6c757d; color: white; }
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    color: #888;
+}
+
+.complaint-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.complaint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.complaint-status {
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.status-open { background: #cce5ff; color: #004085; }
+.status-resolved { background: #d4edda; color: #155724; }
+.complaint-date { font-size: 13px; color: #999; }
+.complaint-about { font-size: 14px; color: #555; margin-bottom: 8px; }
+.complaint-text { font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 10px; }
+.admin-note {
+    background: #f0f8ff;
+    border-left: 3px solid #667eea;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #444;
+}
