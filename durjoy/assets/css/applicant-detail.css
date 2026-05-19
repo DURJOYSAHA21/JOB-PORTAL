@@ -1,0 +1,187 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    font-size: 24px;
+    color: #1a1f36;
+}
+
+.btn-back {
+    background: #4a5568;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-back:hover {
+    background: #2d3748;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.detail-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.detail-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.detail-card h2 {
+    font-size: 18px;
+    color: #1a1f36;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.info-label {
+    width: 140px;
+    font-weight: 600;
+    color: #718096;
+    font-size: 13px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.info-value {
+    color: #2d3748;
+    font-size: 14px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.status-submitted {
+    background: #bee3f8;
+    color: #2b6cb0;
+}
+
+.status-reviewed {
+    background: #fefcbf;
+    color: #975a16;
+}
+
+.status-shortlisted {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status-interview {
+    background: #e9d8fd;
+    color: #553c9a;
+}
+
+.status-rejected {
+    background: #fed7d7;
+    color: #9b2c2c;
+}
+
+.status-dropdown {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.status-msg {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.cover-letter-box {
+    background: #f7fafc;
+    border-left: 4px solid #7c5dfa;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #2d3748;
+}
+
+.cover-letter-empty {
+    color: #a0aec0;
+    font-style: italic;
+    padding: 20px;
+}
+
+.btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.btn-download {
+    background: #ebf4ff;
+    color: #3182ce;
+}
+
+.btn-download:hover {
+    background: #bee3f8;
+}
+
+.btn-message {
+    background: #7c5dfa;
+    color: white;
+}
+
+.btn-message:hover {
+    background: #6b4ce0;
+}
+
+.btn-complain {
+    background: #fff5f5;
+    color: #c53030;
+}
+
+.btn-complain:hover {
+    background: #fed7d7;
+}
