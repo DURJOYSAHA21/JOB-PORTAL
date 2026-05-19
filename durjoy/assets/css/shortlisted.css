@@ -1,0 +1,128 @@
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    font-size: 24px;
+    color: #1a1f36;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    color: #1a1f36;
+}
+
+.count-badge {
+    background: #c6f6d5;
+    color: #22543d;
+    padding: 5px 14px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f7fafc;
+}
+
+th {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    color: #718096;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 14px 18px;
+    font-size: 13px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background: #f7fafc;
+}
+
+.candidate-name {
+    font-weight: 600;
+    color: #1a1f36;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skill-tag {
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-shortlisted {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-view {
+    background: #ebf4ff;
+    color: #3182ce;
+}
+
+.btn-message {
+    background: #7c5dfa;
+    color: white;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}

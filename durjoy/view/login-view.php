@@ -13,7 +13,7 @@ unset($_SESSION["errors"]["login"], $_SESSION["success"], $_SESSION['old_input']
 <head>
     <meta charset="UTF-8">
     <title>Employer Login - HireHub</title>
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
     <div class="box">
@@ -27,7 +27,7 @@ unset($_SESSION["errors"]["login"], $_SESSION["success"], $_SESSION['old_input']
             <p class="success-msg"><?php echo htmlspecialchars($success); ?></p>
         <?php endif; ?>
 
-        <form method="post" action="controller/login-controller.php" id="loginForm" onsubmit="return validateLogin()">
+        <form method="post" action="../controller/login-controller.php" id="loginForm" onsubmit="return validateLogin()">
             <input type="email" name="email" id="email" placeholder="Email" value="<?php echo htmlspecialchars($oldEmail); ?>">
             <span class="error-msg" id="email_error"></span>
 
@@ -36,9 +36,9 @@ unset($_SESSION["errors"]["login"], $_SESSION["success"], $_SESSION['old_input']
 
             <input type="submit" value="Login">
         </form>
-        <a href="view/register/personal-info-view.php">Don't have an account? Register</a>
+        <a href="register/personal-info-view.php">Don't have an account? Register</a>
     </div>
 
-    <script src="assets/js/login.js"></script>
+    <script src="../assets/js/login.js"></script>
 </body>
 </html>

@@ -26,10 +26,7 @@ unset($_SESSION['old_input'], $_SESSION['errors']);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Edit Job - HireHub</title>
     <link rel="stylesheet" href="../../assets/css/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/post-job.css">
 </head>
