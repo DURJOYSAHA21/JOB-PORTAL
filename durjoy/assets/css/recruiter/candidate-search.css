@@ -1,0 +1,28 @@
+.page-header { margin-bottom: 25px; }
+.page-header h1 { font-size: 24px; color: #1a1f36; }
+.page-header p { color: #718096; font-size: 14px; margin-top: 5px; }
+
+.search-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 25px; }
+.search-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; align-items: end; }
+.search-group { display: flex; flex-direction: column; }
+.search-group label { font-size: 12px; font-weight: 600; color: #718096; margin-bottom: 5px; text-transform: uppercase; }
+.search-group input, .search-group select { padding: 10px 14px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; font-family: inherit; }
+.search-group input:focus, .search-group select:focus { outline: none; border-color: #7c5dfa; }
+
+.btn-reset { background: #e2e8f0; color: #4a5568; padding: 10px 20px; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; }
+.btn-reset:hover { background: #cbd5e0; }
+
+.results-card { background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 25px; }
+.results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.results-header h2 { font-size: 18px; color: #1a1f36; }
+.result-count { font-size: 14px; color: #718096; }
+
+.candidate-card { border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+.candidate-card:hover { border-color: #7c5dfa; box-shadow: 0 2px 8px rgba(124,93,250,0.1); }
+.candidate-name { font-size: 16px; font-weight: 600; color: #1a1f36; margin-bottom: 4px; }
+.candidate-headline { color: #7c5dfa; font-size: 13px; font-weight: 500; margin-bottom: 10px; }
+.candidate-meta { display: flex; gap: 20px; font-size: 13px; color: #718096; margin-top: 8px; flex-wrap: wrap; }
+.skills-list { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+.skill-tag { background: #edf2f7; color: #4a5568; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+.candidate-summary { font-size: 13px; color: #718096; margin-top: 10px; line-height: 1.5; }
+.empty-state { text-align: center; color: #a0aec0; padding: 40px; font-size: 15px; }
