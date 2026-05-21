@@ -23,9 +23,7 @@ unset($_SESSION["errors"]["login"], $_SESSION["success"], $_SESSION['old_input']
             <p class="server-error"><?php echo htmlspecialchars($error); ?></p>
         <?php endif; ?>
 
-        <?php if($success): ?>
-            <p class="success-msg"><?php echo htmlspecialchars($success); ?></p>
-        <?php endif; ?>
+       
 
         <form method="post" action="../controller/login-controller.php" id="loginForm" onsubmit="return validateLogin()">
             <input type="email" name="email" id="email" placeholder="Email" value="<?php echo htmlspecialchars($oldEmail); ?>">
