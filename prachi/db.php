@@ -2,7 +2,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$db_name = "job_portal";
+$db_name = "job_portal_project";
 
 $conn = new mysqli($host, $username, $password, $db_name);
 

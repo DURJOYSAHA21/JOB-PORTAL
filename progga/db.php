@@ -8,7 +8,7 @@ class Database
     private $hostname = "localhost";
     private $db_username = "root";
     private $db_password = "";
-    private $db_name = "job_portal";
+    private $db_name = "job_portal_project";
 
     public function connect()
     {
