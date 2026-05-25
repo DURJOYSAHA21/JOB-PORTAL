@@ -24,15 +24,21 @@ $categories = getAllCategories();
         <aside class="sidebar">
             <div class="logo">HireHub</div>
             <nav>
-                <a href="../recruiter-dashboard-view.php">Dashboard</a>
-                <a href="../recruiter-profile-view.php">Agency Profile</a>
-                <a href="../client/manage-clients-view.php">Client Companies</a>
-                <a href="post-job-view.php">Post a Job</a>
-                <a href="manage-jobs-view.php">Manage Jobs</a>
-                <a href="all-jobs-view.php" class="active">All Jobs</a>
-                <a href="../candidate/candidate-search-view.php">Search Candidates</a>
-                <a href="../../../controller/recruiter/recruiter-logout-controller.php">Logout</a>
-            </nav>
+    <a href="../recruiter-dashboard-view.php">Dashboard</a>
+    <a href="../recruiter-profile-view.php">Agency Profile</a>
+    <a href="../client/manage-clients-view.php">Client Companies</a>
+    <a href="post-job-view.php">Post a Job</a>
+    <a href="manage-jobs-view.php">Manage Jobs</a>
+    <a href="all-jobs-view.php">All Jobs</a>
+    <a href="../candidate/candidate-search-view.php">Search Candidates</a>
+    <a href="../outreach/outreach-list-view.php">Outreach</a>
+    <a href="../application/view-applications-view.php">Applications</a>
+    <a href="../candidate/candidate-pipeline-view.php">Pipeline</a>
+    <a href="../placement/placement-history-view.php">Placements</a>
+    <a href="../analytics/recruiter-analytics-view.php">Analytics</a>
+    <a href="../report/client-report-view.php">Reports</a>
+    <a href="../../../controller/recruiter/recruiter-logout-controller.php">Logout</a>
+</nav>
         </aside>
         <main class="main-content">
             <div class="page-header"><h1>All Jobs Across Clients</h1></div>

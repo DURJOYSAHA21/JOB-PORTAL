@@ -20,15 +20,22 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
     <div class="dashboard">
         <aside class="sidebar">
             <div class="logo">HireHub</div>
-            <nav>
-                <a href="../recruiter-dashboard-view.php">Dashboard</a>
-                <a href="../recruiter-profile-view.php">Agency Profile</a>
-                <a href="manage-clients-view.php" class="active">Client Companies</a>
-                <a href="../job/post-job-view.php">Post a Job</a>
-                <a href="../job/manage-jobs-view.php">Manage Jobs</a>
-                <a href="../candidate/candidate-search-view.php">Search Candidates</a>
-                <a href="../../../controller/recruiter/recruiter-logout-controller.php">Logout</a>
-            </nav>
+<nav>
+    <a href="../recruiter-dashboard-view.php">Dashboard</a>
+    <a href="../recruiter-profile-view.php">Agency Profile</a>
+    <a href="manage-clients-view.php">Client Companies</a>
+    <a href="../job/post-job-view.php">Post a Job</a>
+    <a href="../job/manage-jobs-view.php">Manage Jobs</a>
+    <a href="../job/all-jobs-view.php">All Jobs</a>
+    <a href="../candidate/candidate-search-view.php">Search Candidates</a>
+    <a href="../outreach/outreach-list-view.php">Outreach</a>
+    <a href="../application/view-applications-view.php">Applications</a>
+    <a href="../candidate/candidate-pipeline-view.php">Pipeline</a>
+    <a href="../placement/placement-history-view.php">Placements</a>
+    <a href="../analytics/recruiter-analytics-view.php">Analytics</a>
+    <a href="../report/client-report-view.php">Reports</a>
+    <a href="../../../controller/recruiter/recruiter-logout-controller.php">Logout</a>
+</nav>
         </aside>
         <main class="main-content">
             <div class="page-header">

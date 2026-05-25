@@ -22,8 +22,13 @@ if(empty($candidates)) {
 } else {
     foreach($candidates as $c) {
         $html .= '<div class="candidate-card">';
+        $html .= '<div class="candidate-header">';
+        $html .= '<div>';
         $html .= '<div class="candidate-name">' . htmlspecialchars($c['name']) . '</div>';
         $html .= '<div class="candidate-headline">' . htmlspecialchars($c['headline'] ?? 'No headline') . '</div>';
+        $html .= '</div>';
+        $html .= '<a href="candidate-profile-view.php?seeker_id=' . $c['user_id'] . '" class="btn btn-view">View Profile</a>';
+        $html .= '</div>';
         $html .= '<div class="candidate-meta">';
         $html .= '<span>Exp: ' . htmlspecialchars($c['years_experience'] ?? 'N/A') . ' yrs</span>';
         $html .= '<span>Location: ' . htmlspecialchars($c['preferred_location'] ?? 'N/A') . '</span>';

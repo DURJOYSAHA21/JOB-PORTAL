@@ -26,3 +26,6 @@
 .skill-tag { background: #edf2f7; color: #4a5568; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 500; }
 .candidate-summary { font-size: 13px; color: #718096; margin-top: 10px; line-height: 1.5; }
 .empty-state { text-align: center; color: #a0aec0; padding: 40px; font-size: 15px; }
+.candidate-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.btn-view { background: #ebf4ff; color: #3182ce; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.btn-view:hover { background: #bee3f8; }
