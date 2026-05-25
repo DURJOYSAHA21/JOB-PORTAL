@@ -11,7 +11,7 @@ function addRecruiterInfo($user_id, $agencyname, $specialization, $description, 
     $conn->close();
     return $result;
 }
-
+// check if recruiter info is verified
 function recruiterInfoVerify($user_id) {
     $conn = connect();
     $sql = "SELECT * FROM recruiter_profiles JOIN users ON recruiter_profiles.user_id = users.id WHERE users.id = ? AND users.is_verified = 1";
