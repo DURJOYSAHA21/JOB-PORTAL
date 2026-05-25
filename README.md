@@ -1,10 +1,10 @@
 # JOB PORTAL
 
-A recruitment marketplace connecting job seekers, employers, recruiters, and admins.
+
 
 ---
 
-## Test Credentials
+## Credentials
 
 | Role | Name | Email | Password |
 |------|------|-------|----------|
