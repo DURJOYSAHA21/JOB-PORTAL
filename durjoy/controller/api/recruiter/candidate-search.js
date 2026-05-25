@@ -25,10 +25,16 @@ function searchCandidates() {
                     countEl.textContent = response.count + ' found';
                 } else {
                     resultsDiv.innerHTML = '<p class="empty-state">Error loading results.</p>';
+                    countEl.textContent = '0 found';
                 }
             } catch(e) {
                 resultsDiv.innerHTML = '<p class="empty-state">Error processing response.</p>';
+                countEl.textContent = '0 found';
             }
+        }
+        if(this.readyState === 4 && this.status !== 200) {
+            resultsDiv.innerHTML = '<p class="empty-state">Server error. Please try again.</p>';
+            countEl.textContent = '0 found';
         }
     };
 
@@ -47,5 +53,5 @@ function resetSearch() {
     document.getElementById('search-location').value = '';
     document.getElementById('search-experience').value = '';
     document.getElementById('search-salary').value = '';
-    searchCandidates(); // Reload all
+    searchCandidates();
 }

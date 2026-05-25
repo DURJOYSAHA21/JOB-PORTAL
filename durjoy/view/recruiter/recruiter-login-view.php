@@ -10,22 +10,299 @@ unset($_SESSION["errors"]["login"], $_SESSION["success"], $_SESSION['old_input']
 <head>
     <meta charset="UTF-8">
     <title>Recruiter Login - HireHub</title>
-    <link rel="stylesheet" href="../../assets/css/recruiter/login.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Side - Gradient Brand Panel */
+.brand-panel {
+    width: 40%;
+    background: linear-gradient(135deg, #1a1f36 0%, #2d3250 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.brand-panel-inner {
+    text-align: center;
+    padding: 40px;
+}
+
+.brand-logo {
+    margin-bottom: 30px;
+}
+
+.brand-logo-icon {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 10px;
+    color: #7c5dfa;
+}
+
+.brand-logo-name {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.brand-text {
+    margin-top: 20px;
+}
+
+.brand-headline {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.brand-slogan {
+    font-size: 14px;
+    color: #a0aec0;
+    line-height: 1.6;
+}
+
+/* Right Side - Login Form */
+.main-panel {
+    width: 60%;
+    margin-left: 40%;
+    padding: 40px 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-panel-inner {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-panel-header {
+    margin-bottom: 30px;
+}
+
+.main-panel-title {
+    font-size: 28px;
+    color: #1a1f36;
+    margin-bottom: 8px;
+}
+
+.main-panel-sub {
+    font-size: 14px;
+    color: #718096;
+}
+
+.main-panel-sub a {
+    color: #7c5dfa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-panel-sub a:hover {
+    text-decoration: underline;
+}
+
+/* Form */
+.main-panel-form {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-panel-form h3 {
+    font-size: 18px;
+    color: #1a1f36;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.personal-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.personal-form label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.personal-form input[type="email"],
+.personal-form input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.personal-form input:focus {
+    outline: none;
+    border-color: #7c5dfa;
+    box-shadow: 0 0 0 3px rgba(124, 93, 250, 0.1);
+}
+
+.personal-form input::placeholder {
+    color: #a0aec0;
+}
+
+/* Password Field */
+.password-field {
+    position: relative;
+}
+
+.password-warp {
+    position: relative;
+}
+
+.password-warp input {
+    padding-right: 45px !important;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #a0aec0;
+    stroke: currentColor;
+}
+
+.eye-icon:hover {
+    color: #7c5dfa;
+}
+
+/* Error Messages */
+.error {
+    color: #e53e3e;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.server-error {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-bottom: 12px;
+    background: #fff5f5;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 3px solid #e53e3e;
+}
+
+.success-msg {
+    color: #38a169;
+    font-size: 14px;
+    margin-bottom: 12px;
+    background: #f0fff4;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 3px solid #38a169;
+}
+
+/* Submit Button */
+.personal-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #7c5dfa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.personal-form button[type="submit"]:hover {
+    background: #6b4ce0;
+}
+    </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Recruiter Login</h1>
-        <?php if($error): ?><p class="server-error"><?php echo htmlspecialchars($error); ?></p><?php endif; ?>
-        <?php if($success): ?><p class="success-msg"><?php echo htmlspecialchars($success); ?></p><?php endif; ?>
-        <form method="post" action="../../controller/recruiter/recruiter-login-controller.php" onsubmit="return validateLogin()">
-            <input type="email" name="email" id="email" placeholder="Email" value="<?php echo htmlspecialchars($oldEmail); ?>">
-            <span class="error-msg" id="email_error"></span>
-            <input type="password" name="password" id="password" placeholder="Password">
-            <span class="error-msg" id="password_error"></span>
-            <input type="submit" value="Login">
-        </form>
-        <a href="register/personal-info-view.php">Don't have an account? Register</a>
-    </div>
+
+    <aside class="brand-panel">
+        <div class="brand-panel-inner">
+            <div class="brand-logo">
+                <span class="brand-logo-icon">H</span>
+                <span class="brand-logo-name">HireHub</span>
+            </div>
+            <div class="brand-text">
+                <h2 class="brand-headline">Connect Top Talent with Leading Companies</h2>
+                <p class="brand-slogan">Manage multiple client companies and candidates from one platform.</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-panel">
+        <div class="main-panel-inner">
+            <header class="main-panel-header">
+                <h1 class="main-panel-title">Recruiter Login</h1>
+                <p class="main-panel-sub">Don't have an account? <a href="register/personal-info-view.php">Register</a></p>
+            </header>
+        </div>
+
+        <div class="main-panel-form">
+            <h3>Sign In</h3>
+            <form method="post" action="../../controller/recruiter/recruiter-login-controller.php" onsubmit="return validateLogin()">
+                <div class="login-form">
+                    <?php if($error): ?>
+                        <p class="server-error"><?php echo htmlspecialchars($error); ?></p>
+                    <?php endif; ?>
+                    <?php if($success): ?>
+                        <p class="success-msg"><?php echo htmlspecialchars($success); ?></p>
+                    <?php endif; ?>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" value="<?php echo htmlspecialchars($oldEmail); ?>" required>
+                    <span class="error" id="email_error"></span>
+
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <div class="password-warp">
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                            <svg class="eye-icon" viewBox="0 0 20 20" fill="none"><path d="M1 10s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </div>
+                        <span class="error" id="password_error"></span>
+                    </div>
+
+                    <button type="submit" name="login">Login</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
     <script src="../../assets/js/recruiter/login.js"></script>
 </body>
 </html>

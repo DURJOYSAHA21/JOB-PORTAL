@@ -3,7 +3,7 @@ require_once __DIR__ . '/../../db.php';
 
 function getAllCandidates() {
     $conn = connect();
-    $sql = "SELECT u.name, sp.headline, sp.skills, sp.years_experience, 
+    $sql = "SELECT u.id as user_id, u.name, sp.headline, sp.skills, sp.years_experience, 
             sp.preferred_location, sp.education_level, sp.expected_salary, sp.summary
             FROM seeker_profiles sp
             JOIN users u ON sp.user_id = u.id
@@ -19,7 +19,7 @@ function getAllCandidates() {
 
 function searchCandidates($filters = []) {
     $conn = connect();
-    $sql = "SELECT u.name, sp.headline, sp.skills, sp.years_experience, 
+    $sql = "SELECT u.id as user_id, u.name, sp.headline, sp.skills, sp.years_experience, 
             sp.preferred_location, sp.education_level, sp.expected_salary, sp.summary
             FROM seeker_profiles sp
             JOIN users u ON sp.user_id = u.id
@@ -55,4 +55,21 @@ function searchCandidates($filters = []) {
     $candidates = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     $conn->close();
     return $candidates;
+}
+function getSeekerPublicProfile($seeker_user_id) {
+    $conn = connect();
+    $sql = "SELECT u.name, u.email, u.phone,
+            sp.headline, sp.summary, sp.skills, sp.years_experience, 
+            sp.education_level, sp.current_salary, sp.expected_salary, 
+            sp.preferred_location, sp.resume_path
+            FROM users u
+            LEFT JOIN seeker_profiles sp ON u.id = sp.user_id
+            WHERE u.id = ? AND u.role = 'seeker' AND u.is_active = 1 AND u.is_verified = 1";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $seeker_user_id);
+    $stmt->execute();
+    $profile = $stmt->get_result()->fetch_assoc();
+    $stmt->close();
+    $conn->close();
+    return $profile;
 }
