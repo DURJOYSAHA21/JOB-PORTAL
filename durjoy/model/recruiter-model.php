@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../db.php';
 
+// Recruiter
 function getEmployerProfileIdByUserId($user_id) {
     $conn = connect();
     $sql = "SELECT id FROM employer_profiles WHERE user_id = ?";
