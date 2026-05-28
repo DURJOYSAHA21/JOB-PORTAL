@@ -46,6 +46,7 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Dashboard - HireHub</title>
     <link rel="stylesheet" href="../assets/css/dashboard.css">
+
 </head>
 <body>
     <div class="dashboard">
@@ -61,7 +62,10 @@ $conn->close();
                 <a href="company-analytics-view.php">Analytics</a>
                 <a href="jobs/recruiter-relationships-view.php">Recruiters</a>
                 <a href="jobs/submit-complaint-view.php">Complaints</a>
-                <a href="../controller/logout-controller.php">Logout</a>
+                <div class="logout">
+                        <a href="../controller/logout-controller.php">Logout</a>
+                </div>
+                
             </nav>
         </aside>
 

@@ -15,7 +15,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background: #1a1f36;
+    background: #ff6200;
     color: white;
     padding: 20px;
     min-height: 100vh;
@@ -31,7 +31,7 @@ body {
 
 .sidebar nav a {
     display: block;
-    color: #a0aec0;
+    color: #e9b20b;
     text-decoration: none;
     padding: 12px 15px;
     border-radius: 8px;
@@ -40,7 +40,7 @@ body {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-    background: #2d3247;
+    background: #fd4a14;
     color: white;
 }
 

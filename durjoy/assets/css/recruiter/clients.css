@@ -1,0 +1,33 @@
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.page-header h1 { font-size: 24px; color: #1a1f36; }
+.btn { padding: 10px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-block; }
+.btn-primary { background: #7c5dfa; color: white; }
+.btn-primary:hover { background: #6b4ce0; }
+.btn-back { background: #4a5568; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 14px; }
+.btn-back:hover { background: #2d3748; }
+.btn-sm { padding: 6px 14px; font-size: 12px; }
+.btn-post { background: #7c5dfa; color: white; }
+.btn-remove { background: #ef5350; color: white; }
+.alert { padding: 12px 18px; border-radius: 6px; margin-bottom: 20px; }
+.alert-success { background: #e8f5e9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+.alert-error { background: #ffebee; color: #c62828; border-left: 4px solid #c62828; }
+
+.card { background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); overflow: hidden; }
+.card-header { padding: 20px 25px; border-bottom: 1px solid #e2e8f0; }
+.card-header h2 { font-size: 18px; color: #1a1f36; }
+table { width: 100%; border-collapse: collapse; }
+thead { background: #f7fafc; }
+th { padding: 14px 18px; text-align: left; font-size: 11px; font-weight: 700; color: #718096; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
+td { padding: 14px 18px; font-size: 13px; border-bottom: 1px solid #e2e8f0; }
+tbody tr:hover { background: #f7fafc; }
+.badge { padding: 4px 10px; border-radius: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+.badge-registered { background: #c6f6d5; color: #22543d; }
+.badge-standalone { background: #fefcbf; color: #975a16; }
+
+.form-card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); max-width: 600px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 600; color: #4a5568; margin-bottom: 6px; font-size: 14px; }
+.form-group select, .form-group input { width: 100%; padding: 10px 14px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; font-family: inherit; }
+.form-group select:focus, .form-group input:focus { outline: none; border-color: #7c5dfa; }
+.hidden { display: none; }
+.empty-state { text-align: center; padding: 60px 20px; color: #a0aec0; }

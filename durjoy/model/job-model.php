@@ -146,3 +146,48 @@ function getApplicationsOverTime($job_id, $employer_id) {
     $conn->close();
     return $data;
 }
+
+function getRecruiterJobs($recruiter_profile_id) {
+    $conn = connect();
+    $sql = "SELECT j.*, c.name as category_name,
+            COALESCE(
+                (SELECT company_name_override FROM recruiter_clients WHERE recruiter_id = j.recruiter_id AND employer_id = j.employer_id LIMIT 1),
+                (SELECT company_name FROM employer_profiles WHERE id = j.employer_id LIMIT 1)
+            ) as client_name,
+            (SELECT COUNT(*) FROM applications WHERE job_id = j.id) as application_count
+            FROM jobs j
+            LEFT JOIN categories c ON j.category_id = c.id
+            WHERE j.recruiter_id = ?
+            ORDER BY j.is_featured DESC, j.created_at DESC";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $recruiter_profile_id);
+    $stmt->execute();
+    return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+}
+
+function toggleFeaturedStatus($job_id) {
+    $conn = connect();
+    
+    // Get current featured status
+    $sql = "SELECT is_featured FROM jobs WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $job_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $job = $result->fetch_assoc();
+    $stmt->close();
+    
+    if(!$job) { $conn->close(); return false; }
+    
+    // Toggle: if 1 make 0, if 0 make 1
+    $new_status = $job['is_featured'] ? 0 : 1;
+    
+    $sql = "UPDATE jobs SET is_featured = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ii", $new_status, $job_id);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+    
+    return $new_status;
+}

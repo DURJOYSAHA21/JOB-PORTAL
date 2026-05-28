@@ -1,4 +1,17 @@
-* {
+<?php
+if(session_status() === PHP_SESSION_NONE) { session_start(); }
+$error = $_SESSION["errors"]["login"] ?? null;
+$success = $_SESSION["success"] ?? null;
+$oldEmail = $_SESSION['old_input']['email'] ?? '';
+unset($_SESSION["errors"]["login"], $_SESSION["success"], $_SESSION['old_input']);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recruiter Login - HireHub</title>
+    <style>
+        * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -235,3 +248,61 @@ body {
 .personal-form button[type="submit"]:hover {
     background: #6b4ce0;
 }
+    </style>
+</head>
+<body>
+
+    <aside class="brand-panel">
+        <div class="brand-panel-inner">
+            <div class="brand-logo">
+                <span class="brand-logo-icon">H</span>
+                <span class="brand-logo-name">HireHub</span>
+            </div>
+            <div class="brand-text">
+                <h2 class="brand-headline">Connect Top Talent with Leading Companies</h2>
+                <p class="brand-slogan">Manage multiple client companies and candidates from one platform.</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-panel">
+        <div class="main-panel-inner">
+            <header class="main-panel-header">
+                <h1 class="main-panel-title">Recruiter Login</h1>
+                <p class="main-panel-sub">Don't have an account? <a href="register/personal-info-view.php">Register</a></p>
+            </header>
+        </div>
+
+        <div class="main-panel-form">
+            <h3>Sign In</h3>
+            <form method="post" action="../../controller/recruiter/recruiter-login-controller.php" onsubmit="return validateLogin()">
+                <div class="login-form">
+                    <?php if($error): ?>
+                        <p class="server-error"><?php echo htmlspecialchars($error); ?></p>
+                    <?php endif; ?>
+                    <?php if($success): ?>
+                        <p class="success-msg"><?php echo htmlspecialchars($success); ?></p>
+                    <?php endif; ?>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" value="<?php echo htmlspecialchars($oldEmail); ?>" required>
+                    <span class="error" id="email_error"></span>
+
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <div class="password-warp">
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                            <svg class="eye-icon" viewBox="0 0 20 20" fill="none"><path d="M1 10s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </div>
+                        <span class="error" id="password_error"></span>
+                    </div>
+
+                    <button type="submit" name="login">Login</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../../assets/js/recruiter/login.js"></script>
+</body>
+</html>
